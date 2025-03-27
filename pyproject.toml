@@ -1,0 +1,26 @@
+[project]
+name = "document-rag-demo"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "tmaskibail",email = "59851752+tmaskibail@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "langchain (>=0.3.21,<0.4.0)",
+    "tiktoken (>=0.9.0,<0.10.0)",
+    "chromadb (>=0.6.3,<0.7.0)",
+    "pypdf (>=5.4.0,<6.0.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "langchain-ollama (>=0.3.0,<0.4.0)",
+    "langchain-community (>=0.3.20,<0.4.0)"
+]
+
+[tool.poetry]
+packages = [{include = "document_rag_demo", from = "src"}, {include = "chunkers", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
